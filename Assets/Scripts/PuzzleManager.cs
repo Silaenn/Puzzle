@@ -14,10 +14,13 @@ public class PuzzleManager : MonoBehaviour
     public void TambahBenar()
     {
         benar++;
-        if (benar == parentKepingan.childCount)
+        Debug.Log(benar);
+        if (benar == parentKepingan.childCount - 1)
         {
+            GameObject eyeAndMouth = GameObject.FindWithTag("EyeAndMouth");
             Debug.Log("Semua Kepingan Benar!");
-            // GameManager.instance.PuzzleCorrect();
+
+            eyeAndMouth.GetComponent<PuzzleFade>().ShowWithFade();
         }
     }
 }

@@ -7,16 +7,12 @@ public class PuzzleDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDr
 {
     RectTransform rectTransform;
     Vector3 startPosition;
-    CanvasGroup canvasGroup;
-    [SerializeField] GameObject eyeAndMounth;
     bool isCorrect = false;
 
     private void Start()
     {
         rectTransform = GetComponent<RectTransform>();
         startPosition = rectTransform.position;
-        canvasGroup = eyeAndMounth.GetComponent<CanvasGroup>();
-        eyeAndMounth.SetActive(false);
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -36,7 +32,6 @@ public class PuzzleDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDr
         if (isCorrect) return;
 
         GameObject target = GameObject.Find(gameObject.name + "_Target");
-
         if (target != null && Vector3.Distance(rectTransform.position, target.transform.position) < 50f)
         {
             rectTransform.position = target.transform.position;
@@ -45,6 +40,7 @@ public class PuzzleDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDr
             isCorrect = true;
 
             PuzzleManager.instance.TambahBenar();
+
             Debug.Log("Benar!");
         }
         else
@@ -52,27 +48,5 @@ public class PuzzleDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDr
             rectTransform.position = startPosition; // Balik ke posisi awal
             Debug.Log("Salah!");
         }
-    }
-
-    void ShowWithFade()
-    {
-        eyeAndMounth.SetActive(true);
-        canvasGroup.alpha = 0;
-        StartCoroutine(FadeIn());
-    }
-
-    IEnumerator FadeIn()
-    {
-        float duration = 1f;
-        float elapsed = 0f;
-
-        while (elapsed < duration)
-        {
-            elapsed += Time.deltaTime;
-            canvasGroup.alpha = Mathf.Lerp(0, 1, elapsed / duration);
-            yield return null;
-        }
-
-        canvasGroup.alpha = 1;
     }
 }

@@ -12,7 +12,6 @@ public class PuzzleFade : MonoBehaviour
 
     public void ShowWithFade()
     {
-        gameObject.SetActive(true);
         canvasGroup.alpha = 0;
         StartCoroutine(FadeIn());
     }
