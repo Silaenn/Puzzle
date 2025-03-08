@@ -23,7 +23,7 @@ public class PuzzleManager : MonoBehaviour
 
         if (benar == parentKepingan.childCount - 1)
         {
-            Debug.Log("Semua Kepingan Benar!");
+            AudioManager.instance.PlayCorrectSound();
             GameObject eyeAndMouth = GameObject.FindWithTag("EyeAndMouth");
             eyeAndMouth.GetComponent<PuzzleFade>().ShowWithFade();
 

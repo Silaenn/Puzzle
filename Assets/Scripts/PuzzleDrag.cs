@@ -18,13 +18,13 @@ public class PuzzleDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDr
     public void OnBeginDrag(PointerEventData eventData)
     {
         if (isCorrect) return;
-        Debug.Log("Mulai Drag");
+        AudioManager.instance.PlayDragSound();
     }
 
     public void OnDrag(PointerEventData eventData)
     {
         if (isCorrect) return;
-        rectTransform.position = Input.mousePosition; // Puzzle mengikuti mouse
+        rectTransform.position = Input.mousePosition;
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -34,19 +34,18 @@ public class PuzzleDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDr
         GameObject target = GameObject.Find(gameObject.name + "_Target");
         if (target != null && Vector3.Distance(rectTransform.position, target.transform.position) < 50f)
         {
+            AudioManager.instance.PlayDropSound();
             rectTransform.position = target.transform.position;
             rectTransform.rotation = target.transform.rotation;
             target.SetActive(false);
             isCorrect = true;
 
             PuzzleManager.instance.TambahBenar();
-
-            Debug.Log("Benar!");
         }
         else
         {
-            rectTransform.position = startPosition; // Balik ke posisi awal
-            Debug.Log("Salah!");
+            AudioManager.instance.PlayWrongSound();
+            rectTransform.position = startPosition;
         }
     }
 }
