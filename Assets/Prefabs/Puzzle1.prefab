@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6439467709732764831}
+  - component: {fileID: 5614206421788865537}
+  - component: {fileID: 6751437539118917279}
   m_Layer: 5
   m_Name: Puzzle1
   m_TagString: Untagged
@@ -37,6 +39,31 @@ RectTransform:
   m_AnchoredPosition: {x: 337, y: -154}
   m_SizeDelta: {x: 1300, y: 174}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5614206421788865537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222331368178630768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e54bd7b15e8fde4d93fae8e0d57d32f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasGroup: {fileID: 6751437539118917279}
+--- !u!225 &6751437539118917279
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222331368178630768}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1001 &1166271481055702916
 PrefabInstance:
   m_ObjectHideFlags: 0

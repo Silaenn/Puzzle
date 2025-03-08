@@ -27,16 +27,23 @@ public class PuzzleManager : MonoBehaviour
             GameObject eyeAndMouth = GameObject.FindWithTag("EyeAndMouth");
             eyeAndMouth.GetComponent<PuzzleFade>().ShowWithFade();
 
-            Invoke("NextPuzzle", 1f);
+            Invoke("NextPuzzle", 2f);
         }
     }
 
     void SpawnPuzzle()
     {
+
         if (indexPuzzle < puzzles.Length)
         {
             currentPuzzle = Instantiate(puzzles[indexPuzzle], parentCanvas);
             parentKepingan = currentPuzzle.transform.GetChild(1);
+
+            PuzzleTransition transition = currentPuzzle.GetComponent<PuzzleTransition>();
+            if (transition != null)
+            {
+                transition.FadeIn();
+            }
         }
         else
         {
@@ -49,11 +56,17 @@ public class PuzzleManager : MonoBehaviour
         benar = 0;
         indexPuzzle++;
 
-        if (currentPuzzle != null)
+        PuzzleTransition transition = currentPuzzle.GetComponent<PuzzleTransition>();
+        if (transition != null)
         {
-            Destroy(currentPuzzle);
+            transition.FadeOut();
         }
 
-        SpawnPuzzle();
+        if (currentPuzzle != null)
+        {
+            Destroy(currentPuzzle, 1f);
+        }
+
+        Invoke("SpawnPuzzle", 2f);
     }
 }

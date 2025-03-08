@@ -1,0 +1,24 @@
+Third-Party Notices for HyperCasual - Puzzle Game Engine
+
+This document outlines the third-party assets used in "HyperCasual - Puzzle Game Engine," detailing their sources, licensing information, and application within the game.
+
+
+Textures:
+
+	Source: Pixabay (https://pixabay.com/)
+	License: All textures are covered by the Pixabay License, permitting commercial use without attribution.
+	Usage: These textures are employed across various UI elements and game objects, enhancing visual appeal and interaction feedback.
+
+
+Sound Effects:
+
+	Source: Pixabay (www.pixabay.com)
+	License: Licensed under the Pixabay License, allowing commercial usage without attribution requirements.
+	Usage: Utilized for interactions and feedback in the game, such as button clicks, errors, notifications, etc.
+
+Link to License Terms: https://pixabay.com/service/terms/
+
+
+Compliance Note:
+
+This asset package incorporates third-party components whose licenses align with the Unity Asset Store EULA. Full transparency and legal compliance are ensured through detailed information about each component.
