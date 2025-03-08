@@ -9,7 +9,7 @@ public class PuzzleDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDr
     Vector3 startPosition;
     bool isCorrect = false;
 
-    private void Start()
+    void Start()
     {
         rectTransform = GetComponent<RectTransform>();
         startPosition = rectTransform.position;

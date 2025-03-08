@@ -24,7 +24,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1222331368178630768}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 347, y: -174}
+  m_AnchoredPosition: {x: 337, y: -154}
   m_SizeDelta: {x: 1300, y: 174}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1166271481055702916
@@ -128,6 +128,14 @@ PrefabInstance:
     - target: {fileID: 1779834831730454864, guid: 211c8028f1c01a640a8bf2028a75b978, type: 3}
       propertyPath: m_Name
       value: DropPuzzleNibblette
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037963674304917638, guid: 211c8028f1c01a640a8bf2028a75b978, type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5673385521287044354, guid: 211c8028f1c01a640a8bf2028a75b978, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -201
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
