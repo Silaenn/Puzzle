@@ -9,6 +9,7 @@ public class PuzzleManager : MonoBehaviour
     GameObject currentPuzzle;
     int indexPuzzle = 0;
     int benar = 0;
+    int lastPuzzeIndex;
 
     void Awake()
     {
@@ -19,10 +20,10 @@ public class PuzzleManager : MonoBehaviour
     public void TambahBenar()
     {
         benar++;
-        Debug.Log("Benar: " + benar);
 
         if (benar == parentKepingan.childCount - 1)
         {
+            TimerManager.instance.StopTimer();
             AudioManager.instance.PlayCorrectSound();
             GameObject eyeAndMouth = GameObject.FindWithTag("EyeAndMouth");
             eyeAndMouth.GetComponent<PuzzleFade>().ShowWithFade();
@@ -31,9 +32,8 @@ public class PuzzleManager : MonoBehaviour
         }
     }
 
-    void SpawnPuzzle()
+    public void SpawnPuzzle()
     {
-
         if (indexPuzzle < puzzles.Length)
         {
             currentPuzzle = Instantiate(puzzles[indexPuzzle], parentCanvas);
@@ -44,6 +44,7 @@ public class PuzzleManager : MonoBehaviour
             {
                 transition.FadeIn();
             }
+            lastPuzzeIndex = indexPuzzle;
         }
         else
         {
@@ -51,7 +52,7 @@ public class PuzzleManager : MonoBehaviour
         }
     }
 
-    void NextPuzzle()
+    public void NextPuzzle()
     {
         benar = 0;
         indexPuzzle++;
@@ -67,6 +68,31 @@ public class PuzzleManager : MonoBehaviour
             Destroy(currentPuzzle, 1f);
         }
 
-        Invoke("SpawnPuzzle", 2f);
+        Invoke("SpawnPuzzle", 1f);
+        TimerManager.instance.ResetTimer();
+    }
+
+    public void OngameOver()
+    {
+        lastPuzzeIndex = indexPuzzle;
+    }
+
+    public void RestartFromLastPuzzle()
+    {
+        benar = 0;
+        indexPuzzle = lastPuzzeIndex;
+
+        if (currentPuzzle != null)
+        {
+            Destroy(currentPuzzle);
+        }
+
+        SpawnPuzzle();
+        TimerManager.instance.RestartPuzzle();
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
