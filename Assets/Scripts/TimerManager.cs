@@ -50,26 +50,34 @@ public class TimerManager : MonoBehaviour
         {
             gameOverPanel.SetActive(true);
             gameOverPanel.transform.SetAsLastSibling();
+
+            waktuHabisAnimator.gameObject.transform.localScale = Vector3.zero;
             waktuHabisAnimator.gameObject.SetActive(true);
             waktuHabisAnimator.SetTrigger("TimeOver");
             Invoke("ShowButtonPanel", 3f);
         }
 
         PuzzleManager.instance.OngameOver();
-        // Time.timeScale = 0f;
     }
 
     public void RestartPuzzle()
     {
         ResetTimer();
         gameOverPanel.SetActive(false);
+
+        waktuHabisAnimator.gameObject.transform.localScale = Vector3.zero;
+        waktuHabisAnimator.gameObject.SetActive(false);
+
+        buttonPanel.transform.localScale = Vector3.zero;
         buttonPanel.SetActive(false);
-        // Time.timeScale = 1f;
     }
 
     void ShowButtonPanel()
     {
         waktuHabisAnimator.gameObject.SetActive(false);
+        waktuHabisAnimator.gameObject.transform.localScale = Vector3.zero;
+
+        buttonPanel.transform.localScale = Vector3.zero;
         buttonPanel.SetActive(true);
         buttonPanelAnimator.SetTrigger("ShowButtons");
     }
