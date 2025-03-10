@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1437670432416905175}
   - component: {fileID: 5105495635370273783}
   - component: {fileID: 8862250924806569668}
+  - component: {fileID: 1495574869846137204}
   m_Layer: 5
   m_Name: Body_Target
   m_TagString: Untagged
@@ -121,6 +122,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1495574869846137204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67417027477381783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1.95, y: -1.64}
+  m_UseGraphicAlpha: 1
 --- !u!1 &701364571556984052
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,7 +152,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &54230825074232457
 RectTransform:
   m_ObjectHideFlags: 0
@@ -175,6 +191,7 @@ GameObject:
   - component: {fileID: 6291627543807101108}
   - component: {fileID: 4876552788421950663}
   - component: {fileID: 6853981028754649617}
+  - component: {fileID: 7729789446220477124}
   m_Layer: 5
   m_Name: HandRight_Target
   m_TagString: Untagged
@@ -284,6 +301,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &7729789446220477124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060422692048000096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 5, y: 2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &2296625923506721731
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,6 +328,7 @@ GameObject:
   - component: {fileID: 4278368723422777676}
   - component: {fileID: 4969635441055622815}
   - component: {fileID: 3627811609490374534}
+  - component: {fileID: 8664727195994032726}
   m_Layer: 5
   m_Name: EarLeft_Target
   m_TagString: Untagged
@@ -405,6 +438,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8664727195994032726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2296625923506721731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 8, y: 5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &2328404878559085999
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,6 +465,7 @@ GameObject:
   - component: {fileID: 8911559889842321958}
   - component: {fileID: 705885102474317804}
   - component: {fileID: 6614256757347808431}
+  - component: {fileID: 7194240196825248432}
   m_Layer: 5
   m_Name: FootLeft_Target
   m_TagString: Untagged
@@ -526,6 +575,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &7194240196825248432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2328404878559085999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 5, y: 2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &4357249714263497192
 GameObject:
   m_ObjectHideFlags: 0
@@ -538,6 +602,7 @@ GameObject:
   - component: {fileID: 8158395692187824190}
   - component: {fileID: 8366772184324914696}
   - component: {fileID: 5280934522863649711}
+  - component: {fileID: 4937833118814016510}
   m_Layer: 5
   m_Name: HandLeft_Target
   m_TagString: Untagged
@@ -647,6 +712,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &4937833118814016510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4357249714263497192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 5, y: 2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &5556057574678983949
 GameObject:
   m_ObjectHideFlags: 0
@@ -659,6 +739,7 @@ GameObject:
   - component: {fileID: 4686444467558809304}
   - component: {fileID: 4140101342797569740}
   - component: {fileID: 7085861542518104619}
+  - component: {fileID: 7407768230737374522}
   m_Layer: 5
   m_Name: FootRight_Target
   m_TagString: Untagged
@@ -768,6 +849,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &7407768230737374522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5556057574678983949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 5, y: 2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &6110388825430455656
 GameObject:
   m_ObjectHideFlags: 0
@@ -780,6 +876,7 @@ GameObject:
   - component: {fileID: 4239253774442635231}
   - component: {fileID: 3017873290917419733}
   - component: {fileID: 6222738143074122668}
+  - component: {fileID: 7498649195069894006}
   m_Layer: 5
   m_Name: EarRight_Target
   m_TagString: Untagged
@@ -889,3 +986,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &7498649195069894006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6110388825430455656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 8, y: 5}
+  m_UseGraphicAlpha: 1

@@ -231,6 +231,7 @@ MonoBehaviour:
   waktu: 5
   timerText: {fileID: 2059270833}
   isGameOver: 0
+  gamePanelSettings: {fileID: 551863732}
   waktuHabisAnimator: {fileID: 697623209}
   buttonPanelAnimator: {fileID: 549449344}
   gameOverPanel: {fileID: 84676402}
@@ -262,9 +263,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: PanelSettings
       objectReference: {fileID: 0}
+    - target: {fileID: 200176794461725607, guid: a9697686cb70b684191ba042a3f26ec8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 631847805356536410, guid: a9697686cb70b684191ba042a3f26ec8, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1030806466}
+    - target: {fileID: 631847805356536410, guid: a9697686cb70b684191ba042a3f26ec8, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetVolume
+      objectReference: {fileID: 0}
     - target: {fileID: 4349251268034246692, guid: a9697686cb70b684191ba042a3f26ec8, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5035137381308925741, guid: a9697686cb70b684191ba042a3f26ec8, type: 3}
       propertyPath: m_Pivot.x
@@ -348,15 +361,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5169223213808878960, guid: a9697686cb70b684191ba042a3f26ec8, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7308946599972489214, guid: a9697686cb70b684191ba042a3f26ec8, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8469024119192161585, guid: a9697686cb70b684191ba042a3f26ec8, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9073091298981229333, guid: a9697686cb70b684191ba042a3f26ec8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1030806466}
+    - target: {fileID: 9073091298981229333, guid: a9697686cb70b684191ba042a3f26ec8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayClickSound
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -515,6 +536,11 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &551863732 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 200176794461725607, guid: a9697686cb70b684191ba042a3f26ec8, type: 3}
+  m_PrefabInstance: {fileID: 245842584}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &555074289
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,10 +635,10 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 589911496}
   - {fileID: 1911412418}
   - {fileID: 84676403}
   - {fileID: 1779122798}
-  - {fileID: 589911496}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -682,7 +708,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300026, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
+  m_Sprite: {fileID: 21300020, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -700,6 +726,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 607191014}
   m_CullTransparentMesh: 1
+--- !u!114 &675112216 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 631847805356536410, guid: a9697686cb70b684191ba042a3f26ec8, type: 3}
+  m_PrefabInstance: {fileID: 245842584}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &697623205
 GameObject:
   m_ObjectHideFlags: 0
@@ -1234,12 +1271,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1030806465}
-  sfxSlider: {fileID: 0}
+  sfxSlider: {fileID: 675112216}
   dragSound: {fileID: 8300000, guid: b93ac0f7a3e82944887947fc6bb0c663, type: 3}
   dropSound: {fileID: 8300000, guid: cd9cffaeca3179f4e8b01ce9309e0216, type: 3}
   correctSound: {fileID: 8300000, guid: 651cf180ce62498409ff3811009f4085, type: 3}
   wrongSound: {fileID: 8300000, guid: 1f0058185437bff42a5f305a4b3c6143, type: 3}
-  clickSound: {fileID: 0}
+  clickSound: {fileID: 8300000, guid: d44384d2c74ae4446b623d070975ee7a, type: 3}
 --- !u!4 &1030806467
 Transform:
   m_ObjectHideFlags: 0
@@ -1367,14 +1404,14 @@ RectTransform:
   m_GameObject: {fileID: 1569494248}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.83027, y: 0.83027, z: 0.83027}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1911412418}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -221, y: 0}
+  m_AnchoredPosition: {x: -221, y: 8}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1569494250
@@ -1420,7 +1457,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1569494251}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 551863732}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1030806466}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1569494251
 MonoBehaviour:
   m_ObjectHideFlags: 0
