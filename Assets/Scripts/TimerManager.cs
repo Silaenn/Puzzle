@@ -7,6 +7,7 @@ public class TimerManager : MonoBehaviour
     public float waktu = 30f;
     public TextMeshProUGUI timerText;
     public bool isGameOver = false;
+    public GameObject gamePanelSettings;
     public Animator waktuHabisAnimator;
     public Animator buttonPanelAnimator;
     public GameObject gameOverPanel;
@@ -15,6 +16,7 @@ public class TimerManager : MonoBehaviour
     void Awake()
     {
         instance = this;
+        gamePanelSettings.transform.SetSiblingIndex(gamePanelSettings.transform.parent.childCount - 1);
     }
 
     void Update()

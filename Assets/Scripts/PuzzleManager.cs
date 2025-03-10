@@ -39,6 +39,7 @@ public class PuzzleManager : MonoBehaviour
         if (indexPuzzle < puzzles.Length)
         {
             currentPuzzle = Instantiate(puzzles[indexPuzzle], parentCanvas);
+            currentPuzzle.transform.SetAsFirstSibling();
             parentKepingan = currentPuzzle.transform.GetChild(1);
 
             PuzzleTransition transition = currentPuzzle.GetComponent<PuzzleTransition>();
