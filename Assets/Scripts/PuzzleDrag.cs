@@ -44,6 +44,9 @@ public class PuzzleDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDr
         }
         else
         {
+            LeanTween.moveX(gameObject, startPosition.x + 10f, 0.1f)
+            .setLoopPingPong(2)
+            .setOnComplete(() => rectTransform.position = startPosition);
             AudioManager.instance.PlayWrongSound();
             rectTransform.position = startPosition;
         }

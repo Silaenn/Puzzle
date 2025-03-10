@@ -25,6 +25,8 @@ public class PuzzleManager : MonoBehaviour
         {
             TimerManager.instance.StopTimer();
             AudioManager.instance.PlayCorrectSound();
+
+
             GameObject eyeAndMouth = GameObject.FindWithTag("EyeAndMouth");
             eyeAndMouth.GetComponent<PuzzleFade>().ShowWithFade();
 
