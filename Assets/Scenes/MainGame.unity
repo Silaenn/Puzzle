@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f73fdae1ee3214d4c84cd6cc9a214f43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waktu: 5
+  waktu: 120
   timerText: {fileID: 2059270833}
   isGameOver: 0
   gamePanelSettings: {fileID: 551863732}

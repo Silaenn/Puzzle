@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
+using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class PuzzleDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
@@ -35,9 +37,21 @@ public class PuzzleDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDr
         if (target != null && Vector3.Distance(rectTransform.position, target.transform.position) < 50f)
         {
             AudioManager.instance.PlayDropSound();
+
+            UnityEngine.UI.Image targetImage = target.GetComponent<UnityEngine.UI.Image>();
+            UnityEngine.UI.Image currentImage = gameObject.GetComponent<UnityEngine.UI.Image>();
+
+
+            if (targetImage != null && currentImage != null)
+            {
+                targetImage.sprite = currentImage.sprite;
+                target.GetComponent<Outline>().enabled = false; ;
+            }
+
             rectTransform.position = target.transform.position;
             rectTransform.rotation = target.transform.rotation;
-            target.SetActive(false);
+
+            gameObject.SetActive(false);
             isCorrect = true;
 
             PuzzleManager.instance.TambahBenar();

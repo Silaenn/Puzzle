@@ -130,7 +130,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be6b13ec791c7d24e9773d9e8b6a4bf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eyeAndMounth: {fileID: 0}
 --- !u!1 &2757445884864263308
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,7 +158,7 @@ RectTransform:
   m_GameObject: {fileID: 2757445884864263308}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.5, y: 5, z: 3}
+  m_LocalScale: {x: 2.5, y: 5, z: 3.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3593434329794052477}
@@ -219,7 +218,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be6b13ec791c7d24e9773d9e8b6a4bf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eyeAndMounth: {fileID: 0}
 --- !u!1 &3018617731634167453
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,7 +306,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be6b13ec791c7d24e9773d9e8b6a4bf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eyeAndMounth: {fileID: 0}
 --- !u!1 &5814962326790699354
 GameObject:
   m_ObjectHideFlags: 0
@@ -397,7 +394,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be6b13ec791c7d24e9773d9e8b6a4bf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eyeAndMounth: {fileID: 0}
 --- !u!1 &7278331776553992455
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,8 +422,8 @@ RectTransform:
   m_GameObject: {fileID: 7278331776553992455}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1, y: 1, z: 4}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3593434329794052477}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -486,7 +482,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be6b13ec791c7d24e9773d9e8b6a4bf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eyeAndMounth: {fileID: 0}
 --- !u!1 &8792492858640688756
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,7 +570,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be6b13ec791c7d24e9773d9e8b6a4bf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eyeAndMounth: {fileID: 0}
 --- !u!1 &9216528959077548797
 GameObject:
   m_ObjectHideFlags: 0
@@ -664,4 +658,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be6b13ec791c7d24e9773d9e8b6a4bf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eyeAndMounth: {fileID: 0}
