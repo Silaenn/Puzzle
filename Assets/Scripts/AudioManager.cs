@@ -11,6 +11,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip correctSound;
     public AudioClip wrongSound;
     public AudioClip clickSound;
+    public AudioClip spawnSound;
+    public AudioClip gameoverSound;
 
 
     private void Awake()
@@ -61,5 +63,14 @@ public class AudioManager : MonoBehaviour
     public void PlayClickSound()
     {
         audioSource.PlayOneShot(clickSound);
+    }
+
+    public void PlaySpawnSound()
+    {
+        audioSource.PlayOneShot(spawnSound);
+    }
+    public void PlayGameOverSound()
+    {
+        audioSource.PlayOneShot(gameoverSound);
     }
 }

@@ -173,7 +173,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2578636789154590185, guid: e3761399d37924245bd9f56426ef6b40, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3761399d37924245bd9f56426ef6b40, type: 3}
@@ -273,10 +274,6 @@ PrefabInstance:
     - target: {fileID: 701364571556984052, guid: 8d3aad19738c89c47b64883a4730be02, type: 3}
       propertyPath: m_Name
       value: DropPuzzleGlowbble
-      objectReference: {fileID: 0}
-    - target: {fileID: 701364571556984052, guid: 8d3aad19738c89c47b64883a4730be02, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

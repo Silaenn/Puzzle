@@ -28,10 +28,10 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -6}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 527250263406254712}
   - {fileID: 1274937729865201150}
+  - {fileID: 527250263406254712}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -152,17 +152,45 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1312246876049516242, guid: 211c8028f1c01a640a8bf2028a75b978, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1779834831730454864, guid: 211c8028f1c01a640a8bf2028a75b978, type: 3}
       propertyPath: m_Name
       value: DropPuzzleNibblette
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275557395344075626, guid: 211c8028f1c01a640a8bf2028a75b978, type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3037963674304917638, guid: 211c8028f1c01a640a8bf2028a75b978, type: 3}
       propertyPath: m_Alpha
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3748251552652875202, guid: 211c8028f1c01a640a8bf2028a75b978, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4432294506165898990, guid: 211c8028f1c01a640a8bf2028a75b978, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4480258107541856810, guid: 211c8028f1c01a640a8bf2028a75b978, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5673385521287044354, guid: 211c8028f1c01a640a8bf2028a75b978, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -201
+      objectReference: {fileID: 0}
+    - target: {fileID: 5689219606134948411, guid: 211c8028f1c01a640a8bf2028a75b978, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469403389887885073, guid: 211c8028f1c01a640a8bf2028a75b978, type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -187,6 +215,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6439467709732764831}
     m_Modifications:
+    - target: {fileID: 276705752207888344, guid: 58ceda6681dbe17469174c2227a7ba11, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 716331797894081858, guid: 58ceda6681dbe17469174c2227a7ba11, type: 3}
       propertyPath: eyeAndMounth
       value: 
@@ -195,6 +227,10 @@ PrefabInstance:
       propertyPath: eyeAndMounth
       value: 
       objectReference: {fileID: 422007514177554812}
+    - target: {fileID: 1652627588487720261, guid: 58ceda6681dbe17469174c2227a7ba11, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1760699398192183560, guid: 58ceda6681dbe17469174c2227a7ba11, type: 3}
       propertyPath: eyeAndMounth
       value: 
@@ -206,6 +242,14 @@ PrefabInstance:
     - target: {fileID: 2000099735799006666, guid: 58ceda6681dbe17469174c2227a7ba11, type: 3}
       propertyPath: m_Name
       value: DragPuzzleNibblette
+      objectReference: {fileID: 0}
+    - target: {fileID: 2232376314723801092, guid: 58ceda6681dbe17469174c2227a7ba11, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3221645621789077315, guid: 58ceda6681dbe17469174c2227a7ba11, type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3593434329794052477, guid: 58ceda6681dbe17469174c2227a7ba11, type: 3}
       propertyPath: m_Pivot.x
@@ -291,6 +335,14 @@ PrefabInstance:
       propertyPath: eyeAndMounth
       value: 
       objectReference: {fileID: 422007514177554812}
+    - target: {fileID: 4451769433454300296, guid: 58ceda6681dbe17469174c2227a7ba11, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5042418268686539988, guid: 58ceda6681dbe17469174c2227a7ba11, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7085604274213138509, guid: 58ceda6681dbe17469174c2227a7ba11, type: 3}
       propertyPath: eyeAndMounth
       value: 
@@ -299,6 +351,10 @@ PrefabInstance:
       propertyPath: eyeAndMounth
       value: 
       objectReference: {fileID: 422007514177554812}
+    - target: {fileID: 8494567292268894520, guid: 58ceda6681dbe17469174c2227a7ba11, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

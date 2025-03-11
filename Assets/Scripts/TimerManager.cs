@@ -56,6 +56,7 @@ public class TimerManager : MonoBehaviour
             waktuHabisAnimator.gameObject.transform.localScale = Vector3.zero;
             waktuHabisAnimator.gameObject.SetActive(true);
             waktuHabisAnimator.SetTrigger("TimeOver");
+            AudioManager.instance.PlayGameOverSound();
             Invoke("ShowButtonPanel", 3f);
         }
 

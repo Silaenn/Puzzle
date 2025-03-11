@@ -14,14 +14,19 @@ public class PuzzleManager : MonoBehaviour
     void Awake()
     {
         instance = this;
+    }
+
+    void Start()
+    {
         SpawnPuzzle();
     }
 
     public void TambahBenar()
     {
         benar++;
+        Debug.Log(benar);
 
-        if (benar == parentKepingan.childCount - 1)
+        if (benar == parentKepingan.childCount)
         {
             TimerManager.instance.StopTimer();
             AudioManager.instance.PlayCorrectSound();
@@ -45,6 +50,7 @@ public class PuzzleManager : MonoBehaviour
             PuzzleTransition transition = currentPuzzle.GetComponent<PuzzleTransition>();
             if (transition != null)
             {
+                AudioManager.instance.PlaySpawnSound();
                 transition.FadeIn();
             }
             lastPuzzeIndex = indexPuzzle;
