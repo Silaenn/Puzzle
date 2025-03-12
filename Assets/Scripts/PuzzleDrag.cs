@@ -33,36 +33,63 @@ public class PuzzleDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDr
     {
         if (isCorrect) return;
 
-        GameObject target = GameObject.Find(gameObject.name + "_Target");
-        if (target != null && Vector3.Distance(rectTransform.position, target.transform.position) < 50f)
+        string targetName = gameObject.name + "_Target";
+        GameObject[] allObjects = GameObject.FindObjectsOfType<GameObject>();
+
+        GameObject closestTarget = null;
+        float minDistance = 50f;
+
+        foreach (GameObject obj in allObjects)
         {
-            AudioManager.instance.PlayDropSound();
-
-            UnityEngine.UI.Image targetImage = target.GetComponent<UnityEngine.UI.Image>();
-            UnityEngine.UI.Image currentImage = gameObject.GetComponent<UnityEngine.UI.Image>();
-
-
-            if (targetImage != null && currentImage != null)
+            if (obj.name == targetName)
             {
-                targetImage.sprite = currentImage.sprite;
-                target.GetComponent<Outline>().enabled = false; ;
+                float distance = Vector3.Distance(rectTransform.position, obj.transform.position);
+                if (distance < minDistance)
+                {
+                    minDistance = distance;
+                    closestTarget = obj;
+                }
             }
+        }
 
-            rectTransform.position = target.transform.position;
-            rectTransform.rotation = target.transform.rotation;
-
-            gameObject.SetActive(false);
-            isCorrect = true;
-
-            PuzzleManager.instance.TambahBenar();
+        if (closestTarget != null)
+        {
+            PlaceOnTarget(closestTarget);
         }
         else
         {
-            LeanTween.moveX(gameObject, startPosition.x + 10f, 0.1f)
+            ResetPosition();
+        }
+    }
+
+    private void ResetPosition()
+    {
+        LeanTween.moveX(gameObject, startPosition.x + 10f, 0.1f)
             .setLoopPingPong(2)
             .setOnComplete(() => rectTransform.position = startPosition);
-            AudioManager.instance.PlayWrongSound();
-            rectTransform.position = startPosition;
+        AudioManager.instance.PlayWrongSound();
+        rectTransform.position = startPosition;
+    }
+
+    private void PlaceOnTarget(GameObject closestTarget)
+    {
+        AudioManager.instance.PlayDropSound();
+
+        UnityEngine.UI.Image targetImage = closestTarget.GetComponent<UnityEngine.UI.Image>();
+        UnityEngine.UI.Image currentImage = gameObject.GetComponent<UnityEngine.UI.Image>();
+
+        if (targetImage != null && currentImage != null)
+        {
+            targetImage.sprite = currentImage.sprite;
+            closestTarget.GetComponent<Outline>().enabled = false;
         }
+
+        rectTransform.position = closestTarget.transform.position;
+        rectTransform.rotation = closestTarget.transform.rotation;
+
+        gameObject.SetActive(false);
+        isCorrect = true;
+
+        PuzzleManager.instance.TambahBenar();
     }
 }
