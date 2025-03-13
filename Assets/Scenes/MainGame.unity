@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f73fdae1ee3214d4c84cd6cc9a214f43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waktu: 5
+  waktu: 30
   timerText: {fileID: 2059270833}
   isGameOver: 0
   gamePanelSettings: {fileID: 551863732}
@@ -1359,7 +1359,7 @@ MonoBehaviour:
   clickSound: {fileID: 8300000, guid: d44384d2c74ae4446b623d070975ee7a, type: 3}
   spawnSound: {fileID: 8300000, guid: 7bd6b897eb5ca4b7d88a205c4a51640c, type: 3}
   gameoverSound: {fileID: 8300000, guid: 802af09336bdbbf4b9066951417fc753, type: 3}
-  successSound: {fileID: 8300000, guid: 7dc895ecac5194741a91f14a9b0a8182, type: 3}
+  successSound: {fileID: 8300000, guid: d19d3561e34586c4583766c5e0a46713, type: 3}
 --- !u!4 &1030806467
 Transform:
   m_ObjectHideFlags: 0
@@ -2014,6 +2014,7 @@ GameObject:
   - component: {fileID: 1779122798}
   - component: {fileID: 1779122800}
   - component: {fileID: 1779122799}
+  - component: {fileID: 1779122801}
   m_Layer: 5
   m_Name: Success
   m_TagString: Untagged
@@ -2137,6 +2138,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1779122797}
   m_CullTransparentMesh: 1
+--- !u!114 &1779122801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779122797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c66c4a76904162446bf622841fab00b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 1779122799}
+  typingSpeed: 0.05
 --- !u!1 &1911412417
 GameObject:
   m_ObjectHideFlags: 0

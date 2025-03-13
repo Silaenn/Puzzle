@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -58,10 +59,12 @@ public class PuzzleManager : MonoBehaviour
         }
         else
         {
+            TimerManager.instance.StopTimer();
             successPanel.SetActive(true);
             AudioManager.instance.PlaySuccesSound();
-            SceneManager.LoadScene("MainMenu");
+
             Debug.Log("Semua Puzzle Selesai!");
+            StartCoroutine(LoadSceneAfterDelay());
         }
     }
 
@@ -107,5 +110,11 @@ public class PuzzleManager : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    IEnumerator LoadSceneAfterDelay()
+    {
+        yield return new WaitForSeconds(6f);
+        SceneManager.LoadScene("MainMenu");
     }
 }
