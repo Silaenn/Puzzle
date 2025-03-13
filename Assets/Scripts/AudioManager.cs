@@ -13,6 +13,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip clickSound;
     public AudioClip spawnSound;
     public AudioClip gameoverSound;
+    public AudioClip successSound;
 
 
     private void Awake()
@@ -72,5 +73,10 @@ public class AudioManager : MonoBehaviour
     public void PlayGameOverSound()
     {
         audioSource.PlayOneShot(gameoverSound);
+    }
+
+    public void PlaySuccesSound()
+    {
+        audioSource.PlayOneShot(successSound);
     }
 }

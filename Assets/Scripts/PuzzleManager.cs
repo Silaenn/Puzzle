@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PuzzleManager : MonoBehaviour
 {
@@ -6,6 +7,7 @@ public class PuzzleManager : MonoBehaviour
     public Transform parentKepingan;
     public GameObject[] puzzles;
     public Transform parentCanvas;
+    public GameObject successPanel;
     GameObject currentPuzzle;
     int indexPuzzle = 0;
     int benar = 0;
@@ -30,7 +32,6 @@ public class PuzzleManager : MonoBehaviour
         {
             TimerManager.instance.StopTimer();
             AudioManager.instance.PlayCorrectSound();
-
 
             GameObject eyeAndMouth = GameObject.FindWithTag("EyeAndMouth");
             eyeAndMouth.GetComponent<PuzzleFade>().ShowWithFade();
@@ -57,6 +58,9 @@ public class PuzzleManager : MonoBehaviour
         }
         else
         {
+            successPanel.SetActive(true);
+            AudioManager.instance.PlaySuccesSound();
+            SceneManager.LoadScene("MainMenu");
             Debug.Log("Semua Puzzle Selesai!");
         }
     }
