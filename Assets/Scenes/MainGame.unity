@@ -275,6 +275,10 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetVolume
       objectReference: {fileID: 0}
+    - target: {fileID: 4034259556896699725, guid: a9697686cb70b684191ba042a3f26ec8, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4349251268034246692, guid: a9697686cb70b684191ba042a3f26ec8, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -367,6 +371,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7919643207649228107, guid: a9697686cb70b684191ba042a3f26ec8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -5.0000305
+      objectReference: {fileID: 0}
     - target: {fileID: 8469024119192161585, guid: a9697686cb70b684191ba042a3f26ec8, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -382,8 +390,28 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6170250612925112443, guid: a9697686cb70b684191ba042a3f26ec8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 245842586}
   m_SourcePrefab: {fileID: 100100000, guid: a9697686cb70b684191ba042a3f26ec8, type: 3}
+--- !u!1 &245842585 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6170250612925112443, guid: a9697686cb70b684191ba042a3f26ec8, type: 3}
+  m_PrefabInstance: {fileID: 245842584}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &245842586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245842585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 646ebf77bd9dbfd4393308688c712d41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -635,8 +663,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 589911496}
   - {fileID: 1911412418}
+  - {fileID: 589911496}
   - {fileID: 84676403}
   - {fileID: 761867224}
   m_Father: {fileID: 0}

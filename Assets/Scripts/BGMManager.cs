@@ -32,12 +32,32 @@ public class BGMManager : MonoBehaviour
             audioSource.volume = savedVolume;
             if (volumeSlider != null) volumeSlider.value = savedVolume;
         }
+        else
+        {
+            audioSource.volume = 1f;
+        }
 
         audioSource.Play();
 
         if (volumeSlider != null)
         {
             volumeSlider.onValueChanged.AddListener(SetVolume);
+        }
+    }
+
+    public void RegisterSlider(Slider newSlider)
+    {
+        if (volumeSlider != null)
+        {
+            volumeSlider.onValueChanged.RemoveListener(SetVolume);
+        }
+
+        volumeSlider = newSlider;
+
+        if (volumeSlider != null)
+        {
+            volumeSlider.onValueChanged.AddListener(SetVolume);
+            volumeSlider.value = audioSource.volume;
         }
     }
 
